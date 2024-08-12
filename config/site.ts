@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "Crypto Buyout",
-  description: "Crypto Buyout",
+  name: "Chain Market",
+  description: "Buy and sell your stuff for crypto on the Chain Market.",
   url: "https://localhost:3000",
   ogImage: "",
   links: {
@@ -40,4 +40,4 @@ export const siteConfig = {
       href: "/",
     },
   ],
-}
+};
