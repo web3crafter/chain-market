@@ -4,6 +4,8 @@ import "./globals.css"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { SiteHeader } from "@/components/navbar/site-header"
 import { Footer } from "@/components/navbar/footer"
+import { WagmiRainbowProvider } from "@/providers/wagmi-rainbow-provider"
+import "@rainbow-me/rainbowkit/styles.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -20,18 +22,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="container">
-            <SiteHeader />
-            {children}
-            <Footer />
-          </div>
-        </ThemeProvider>
+        <WagmiRainbowProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="container">
+              <SiteHeader />
+              {children}
+              <Footer />
+            </div>
+          </ThemeProvider>
+        </WagmiRainbowProvider>
       </body>
     </html>
   )
