@@ -13,31 +13,89 @@ export const siteConfig = {
       title: "Home",
       href: "/",
     },
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "Home",
-      href: "/",
-    },
   ],
   mobileNav: [
     {
       title: "Home",
       href: "/",
     },
+  ],
+  footer: [
     {
-      title: "Home",
-      href: "/",
+      label: "Resources",
+      items: [
+        {
+          href: "#",
+          name: "Contact",
+        },
+        {
+          href: "#",
+          name: "Support",
+        },
+        {
+          href: "#",
+          name: "Documentation",
+        },
+        {
+          href: "#",
+          name: "Pricing",
+        },
+      ],
     },
     {
-      title: "Home",
-      href: "/",
+      label: "About",
+      items: [
+        {
+          href: "#",
+          name: "Terms",
+        },
+        {
+          href: "#",
+          name: "License",
+        },
+        {
+          href: "#",
+          name: "Privacy",
+        },
+        {
+          href: "/about",
+          name: "About US",
+        },
+      ],
     },
     {
-      title: "Home",
-      href: "/",
+      label: "Explore",
+      items: [
+        {
+          href: "/explore-topics",
+          name: "Topics",
+        },
+        {
+          href: "/explore-authors",
+          name: "Authors",
+        },
+        {
+          href: "/tools/water-catchment",
+          name: "Tools",
+        },
+        {
+          href: "#",
+          name: "Blog",
+        },
+      ],
+    },
+    {
+      label: "Company",
+      items: [
+        {
+          href: "#",
+          name: "Partners",
+        },
+        {
+          href: "#",
+          name: "Team",
+        },
+      ],
     },
   ],
-};
+}
