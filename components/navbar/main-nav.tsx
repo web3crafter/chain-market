@@ -1,8 +1,8 @@
 import Link from "next/link"
-import { ConnectButton } from "@rainbow-me/rainbowkit"
 
 import { siteConfig } from "@/config/site"
 import { ThemeToggler } from "@/components/theme-toggler"
+import { ConnectButton } from "@rainbow-me/rainbowkit"
 
 export const MainNav = () => {
   return (
@@ -12,11 +12,14 @@ export const MainNav = () => {
           <Link href="/">{siteConfig.name}</Link>
 
           {siteConfig.mainNav.map((item) => (
-            <div key={item.title}>{item.title}</div>
+            <Link href={item.href} key={item.title}>
+              {item.title}
+            </Link>
           ))}
         </div>
         <div className="flex gap-4">
-          <ConnectButton showBalance={false} />
+          <ConnectButton />
+
           <ThemeToggler />
         </div>
       </div>
