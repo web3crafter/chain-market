@@ -31,7 +31,7 @@ export default function RootLayout({
           >
             <div className="container">
               <SiteHeader />
-              {children}
+              <div className="py-16">{children}</div>
               <Footer />
             </div>
           </ThemeProvider>

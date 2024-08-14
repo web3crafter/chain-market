@@ -13,11 +13,19 @@ export const siteConfig = {
       title: "Home",
       href: "/",
     },
+    {
+      title: "Post item",
+      href: "/item/create",
+    },
   ],
   mobileNav: [
     {
       title: "Home",
       href: "/",
+    },
+    {
+      title: "Post item",
+      href: "/item/create",
     },
   ],
   footer: [

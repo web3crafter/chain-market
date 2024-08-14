@@ -1,21 +1,12 @@
-import { integer, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core"
-
-export const users = pgTable("cm_user", {
-  id: text("id").primaryKey(),
-  image: text("image"),
-})
+import { integer, pgTable, serial, text } from "drizzle-orm/pg-core"
 
 export const items = pgTable("cm_item", {
   id: serial("id").primaryKey(),
-  userId: text("userId")
-    .notNull()
-    .references(() => users.id, { onDelete: "cascade" }),
-  name: text("name").notNull(),
-  fileKey: text("fileKey").notNull(),
-  currentBid: integer("currentBid").notNull().default(0),
-  startingPrice: integer("startingPrice").notNull().default(0),
-  bidInterval: integer("bidInterval").notNull().default(100),
-  endDate: timestamp("endDate", { mode: "date" }).notNull(),
+  sellerId: text("sellerId").notNull(),
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  imageUrl: text("imageUrl").notNull(),
+  price: integer("currentBid").notNull().default(0),
 })
 
 export type Item = typeof items.$inferSelect

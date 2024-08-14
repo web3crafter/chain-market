@@ -12,7 +12,9 @@ export const MainNav = () => {
           <Link href="/">{siteConfig.name}</Link>
 
           {siteConfig.mainNav.map((item) => (
-            <div key={item.title}>{item.title}</div>
+            <Link href={item.href} key={item.title}>
+              {item.title}
+            </Link>
           ))}
         </div>
         <div className="flex gap-4">
