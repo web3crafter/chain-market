@@ -29,11 +29,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="container">
-              <SiteHeader />
-              <div className="py-16">{children}</div>
-              <Footer />
-            </div>
+            <SiteHeader />
+            <div className="container py-16">{children}</div>
+            <Footer />
           </ThemeProvider>
         </WagmiRainbowProvider>
       </body>

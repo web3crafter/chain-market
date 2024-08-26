@@ -7,7 +7,7 @@ import { ThemeToggler } from "@/components/theme-toggler"
 export const MainNav = () => {
   return (
     <div>
-      <div className="flex items-center justify-between py-8">
+      <div className="container flex items-center justify-between py-8">
         <div className="flex gap-4">
           <Link href="/">{siteConfig.name}</Link>
 
@@ -22,7 +22,7 @@ export const MainNav = () => {
           <ThemeToggler />
         </div>
       </div>
-      <div className="h-0.5 w-full bg-gradient-to-r from-primary via-teal-500 to-primary" />
+      <div className="absolute left-0 h-0.5 w-full bg-gradient-to-r from-primary via-teal-500 to-primary" />
     </div>
   )
 }

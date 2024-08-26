@@ -1,10 +1,18 @@
-import { siteConfig } from "@/config/site";
-import Image from "next/image";
+import { database } from "@/db/database"
 
-export default function Home() {
+import { ItemCard } from "@/components/item-card"
+import { getAllItems } from "@/data.access/items"
+
+const HomePage = async () => {
+  const items = await getAllItems()
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {siteConfig.name}
+    <main className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {items.map((item) => (
+        <ItemCard key={item.id} item={item} />
+      ))}
     </main>
-  );
+  )
 }
+
+export default HomePage
